@@ -1,0 +1,91 @@
+class  Car():
+    def __init__(self, mark, color, transmission):
+        self.mark= mark
+        self.color= color
+        self.transmission= transmission
+    
+    def __str__(self):
+           return "\n".join ([f" Марка: {self.mark}",
+                              f" Цвет: {self.color}",
+                              f" Трансмиссия: {self.transmission}"])
+    def ch_mark(self):
+        print("Введите марку") комметарий
+
+        self.mark = input()
+        
+    def ch_color(self):
+        print("Введите цвет")
+        self.color = input()
+        
+    def ch_transmission(self):
+        print("Введите трансмиссию")
+        self.transmission = input()
+        
+    def new(self):
+        new_car=f"{self.mark}, {self.color}, {self.transmission}"
+        
+car1=Car("Honda","Черный","Автоматическая")
+car2=Car("BMW","Синий","Механическая")
+car3=Car("Tesla","Белый","Электродвигатель")
+all=0
+while all != 1:
+    print("Honda-номер 1; BMW-номер 2; Tesla- номер 3")
+    print("Введите номер интересующей машины, Введите 0 чтобы внести изменения или Введите 5 чтобы ддобавить новую машину")
+    nomer=int(input())
+    if nomer==1:
+        print(f"Характеристика машины:\n{car1}")
+    if nomer==2:
+        print(f"Характеристика машины:\n{car2}")
+    if nomer==3:
+        print(f"Характеристика машины:\n{car3}")
+    if nomer ==0:
+        print("Введите номер машины, которую хотите изменить")
+        c =int(input())
+        if c == 1:
+            print("Введите нмер того, что хотите изменить. 1-марка, 2-цвет, 3-трансмиссия")
+            izm= int(input())
+            if izm == 1:
+                car1.ch_mark()
+                print(f"\n{car1}")
+            if izm == 2:
+                car1.ch_color()
+                print(f"\n{car1}")
+            if izm == 3:
+                car1.ch_transmission()
+                print(f"\n{car1}")
+        if c ==2:
+            print("Введите нмер того, что хотите изменить. 1-марка, 2-цвет, 3-трансмиссия")
+            izm2= int(input())
+            if izm2 == 1:
+                car2.ch_mark()
+                print(f"\n{car2}")
+            if izm2 == 2:
+                car2.ch_color()
+                print(f"\n{car2}")
+            if izm2 == 3:
+                car2.ch_transmission()
+                print(f"\n{car2}")
+        if c ==3:
+            print("Введите нмер того, что хотите изменить. 1-марка, 2-цвет, 3-трансмиссия")
+            izm3= int(input())
+            if izm3 == 1:
+                car3.ch_mark()
+                print(f"\n{car3}")
+            if izm3 == 2:
+                car3.ch_color()
+                print(f"\n{car3}")
+            if izm3 == 3:
+                car3.ch_transmission()
+                print(f"\n{car3}")
+    if nomer==5:
+        print("Введите марку")
+        mark= input()
+        mark = f" {mark}"
+        print("Введите цвет")
+        color= input()
+        color = f" {color}"
+        print("Введите трансмиссию")
+        transmission= input()
+        transmission = f"{transmission}"
+        car=Car(mark, color, transmission)
+        print(car.new())
