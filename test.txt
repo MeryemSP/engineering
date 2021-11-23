@@ -10,7 +10,7 @@ class  Car():
                               f" Трансмиссия: {self.transmission}"])
     def ch_mark(self):
         print("Введите марку") 
-        self.mark = input()
+        self.mark = input() new
         
     def ch_color(self):
         print("Введите цвет")
